@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Neighborhood Change</title>
+  <!-- Load Leaflet from an https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
+  <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id='map1'></div>
+
+  <div id="map1basemaps" class="basemaps-wrapper leaflet-bar">
+    <select name="basemaps">
+      <option value="magic1934">1934</option>
+      <option value="magic1990">1990</option>
+      <option value="magic2004">2004</option>
+      <option value="esriPresent" disabled>Present<options>
+      </select>
+  </div>
+
+  <div id='map2'></div>
+
+  <div id="map2basemaps" class="basemaps-wrapper leaflet-bar">
+    <select name="basemaps">
+      <option value="esriPresent">Present<options>
+      <option value="magic1934" disabled>1934</option>
+      <option value="magic1990">1990</option>
+      <option value="magic2004">2004</option>
+    </select>
+  </div>
+
+  <div id="permalink">Permalink</div>
+
+  <!-- Load Leaflet from an https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
+  <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+  <!-- load jQuery  -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <!-- load Esri Leaflet -->
+  <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.2/esri-leaflet.js"></script>
+  <!-- load customized L.GeoSearch from local directory -->
+  <script src="L.GeoSearch/js/l.control.geosearch.js"></script>
+  <script src="L.GeoSearch/js/l.geosearch.provider.google.js"></script>
+  <link rel="stylesheet" href="L.GeoSearch/css/l.geosearch.css">
+  <!-- load L.Map.Sync from local directory -->
+  <script type="text/javascript" src="L.Map.Sync.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    // UConn MAGIC Google Analytics tracking code
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-4813179-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
