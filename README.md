@@ -14,8 +14,8 @@ Side-by-side aerial views of Connecticut neighborhood change, 1934-present. Leaf
 - Thanks @ilyankou for adding basemap switcher control, permalink control, maximum bounds
 - jQuery https://jquery.com/
 - Esri Leaflet for Esri imagery and labels https://github.com/Esri/esri-leaflet/
-- L.GeoSearch v1.1.0 with Google geocode provider https://github.com/smeijer/L.GeoSearch, customized to insert Google API key for searches https://github.com/smeijer/L.GeoSearch/issues/77
-- L.Map.Sync v0.0.5 https://github.com/turban/Leaflet.Sync
+- Mapzen leaflet geocoder to search locations https://github.com/mapzen/leaflet-geocoder
+- L.Map.Sync v0.0.5 to synchronize map movements https://github.com/turban/Leaflet.Sync
 
 ## Known issues
 - Console warning: Mixed content (http served over https). Asked UConn MAGIC about future https support for WMS server or alternate map source.
