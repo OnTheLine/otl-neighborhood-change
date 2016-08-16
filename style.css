@@ -22,8 +22,9 @@ html, body {
 #map1basemaps { left: 10px; }
 #map2basemaps { left: calc(50.5% + 10px); }
 
-.leaflet-control-geosearch {
-	top: 25px;
+/*L.control.geocoder via Mapzen*/
+.leaflet-pelias-control {
+	left: 80px;
 }
 
 #permalink {

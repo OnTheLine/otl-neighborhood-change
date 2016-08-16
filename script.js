@@ -2,6 +2,7 @@
 var startCenter = [41.7647179, -72.671771]; // displays "Hartford" Esri label on downtown area
 var minLatLng = [40.9301, -73.7238];
 var maxLatLng = [42.0248, -71.7792];
+var bounds = L.latLngBounds(minLatLng, maxLatLng);
 var startZoom = 14;
 var minZoom = 9;
 var layer1 = 'magic1934';
@@ -126,9 +127,12 @@ L.control.zoom({position: "topright"}).addTo(map2);
 
 L.control.scale().addTo(map2);
 
-new L.Control.GeoSearch({
-				provider: new L.GeoSearch.Provider.Google(),
-        position: 'topleft' // see also style.css
+// Get your own free Mapzen search API key and see geocoder options at https://github.com/mapzen/leaflet-geocoder
+// modified in style.css as leaflet-pelias-control
+L.control.geocoder('search-jBPBt5y', {
+  attribution: null,
+  bounds: bounds,
+  placeholder: 'Search in Connecticut'
 }).addTo(map2);
 
 // sync maps using Leaflet.Sync code
