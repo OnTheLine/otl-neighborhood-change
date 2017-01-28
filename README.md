@@ -2,13 +2,13 @@
 Side-by-side aerial views of Connecticut neighborhood change, 1934-present. Leaflet synchronized dual maps to display basemaps of same location over time, with geosearch and permalink features
 
 ## Link
-- http://jackdougherty.github.io/otl-neighborhood-change/index-frame.html
+- https://jackdougherty.github.io/otl-neighborhood-change/index-frame.html
 
 ## Shortcode for http://OnTheLine.trincoll.edu
-- [iframe src="http://jackdougherty.github.io/otl-neighborhood-change/index.html" width=100% height = 450]
+- [iframe src="https://jackdougherty.github.io/otl-neighborhood-change/index.html" width=100% height = 450]
 
 ## Based on template
-- http://github.com/jackdougherty/leaflet-map-sync/
+- https://github.com/jackdougherty/leaflet-map-sync/
 
 ## Credits and dependencies
 - Thanks @ilyankou for adding basemap switcher control, permalink control, maximum bounds
