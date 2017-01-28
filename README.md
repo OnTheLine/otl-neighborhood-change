@@ -10,6 +10,8 @@ Side-by-side aerial views of Connecticut neighborhood change, 1934-present. Leaf
 ## Based on template
 - https://github.com/jackdougherty/leaflet-map-sync/
 
+Replaces 2012 UConn MAGIC Google Map http://magic.lib.uconn.edu/otl/dualcontrol_aerialchange.html
+
 ## Credits and dependencies
 - Thanks @ilyankou for adding basemap switcher control, permalink control, maximum bounds
 - jQuery https://jquery.com/
