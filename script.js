@@ -129,11 +129,35 @@ L.control.scale().addTo(map2);
 
 // Get your own free Mapzen search API key and see geocoder options at https://github.com/mapzen/leaflet-geocoder
 // modified in style.css as leaflet-pelias-control
+/*
 L.control.geocoder('search-jBPBt5y', {
   attribution: null,
   bounds: bounds,
   placeholder: 'Search in Connecticut'
+}).addTo(map2); */
+
+var geocoder = L.Control.geocoder({
+  expand: 'click',
+  position: 'topright',
+  geocoder: new L.Control.Geocoder.Nominatim({
+    geocodingQueryParams: {
+      viewbox: [],  // by default, viewbox is empty
+      bounded: 0,
+    }
+  }),
 }).addTo(map2);
+
+function updateGeocoderBounds() {
+  var bounds = map2.getBounds();
+  var mapBounds = [
+    bounds._southWest.lat, bounds._northEast.lat,
+    bounds._southWest.lng, bounds._northEast.lng,
+  ];
+  geocoder.options.geocoder.options.geocodingQueryParams.viewbox = mapBounds;
+}
+
+// Update search viewbox coordinates every time the map moves
+map2.on('moveend', updateGeocoderBounds);
 
 // sync maps using Leaflet.Sync code
 map1.sync(map2);
