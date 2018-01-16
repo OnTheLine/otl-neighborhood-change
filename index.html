@@ -7,6 +7,9 @@
   <!-- Load Leaflet from an https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
   <link rel="stylesheet" href="style.css">
+
+
+
 </head>
 <body>
   <div id='map1'></div>
@@ -39,9 +42,14 @@
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <!-- load Esri Leaflet -->
   <script src="https://unpkg.com/esri-leaflet@2.0.7"></script>
-  <!-- Load leaflet-geocoder to search locations-->
+  <!-- Load leaflet-geocoder to search locations
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.7.1/leaflet-geocoder-mapzen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.7.1/leaflet-geocoder-mapzen.js"></script>
+-->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
   <!-- load L.Map.Sync from local directory -->
   <script type="text/javascript" src="L.Map.Sync.js"></script>
   <script type="text/javascript" src="script.js"></script>
