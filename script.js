@@ -127,15 +127,6 @@ L.control.zoom({position: "topright"}).addTo(map2);
 
 L.control.scale().addTo(map2);
 
-// Get your own free Mapzen search API key and see geocoder options at https://github.com/mapzen/leaflet-geocoder
-// modified in style.css as leaflet-pelias-control
-/*
-L.control.geocoder('search-jBPBt5y', {
-  attribution: null,
-  bounds: bounds,
-  placeholder: 'Search in Connecticut'
-}).addTo(map2); */
-
 var geocoder = L.Control.geocoder({
   expand: 'click',
   position: 'topright',

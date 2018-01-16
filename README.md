@@ -16,8 +16,8 @@ Replaces 2012 UConn MAGIC Google Map http://magic.lib.uconn.edu/otl/dualcontrol_
 - Thanks @ilyankou for adding basemap switcher control, permalink control, maximum bounds
 - jQuery https://jquery.com/
 - Esri Leaflet for Esri imagery and labels https://github.com/Esri/esri-leaflet/
-- Mapzen leaflet geocoder to search locations https://github.com/mapzen/leaflet-geocoder
-- L.Map.Sync v0.0.5 to synchronize map movements https://github.com/turban/Leaflet.Sync
+- Leaflet control geocoder to search locations https://github.com/perliedman/leaflet-control-geocoder
+- L.Map.Sync v0.2.2 to synchronize map movements https://github.com/turban/Leaflet.Sync
 
 ## Known issues
 - Console warning: Mixed content (http served over https). Asked UConn MAGIC about future https support for WMS server or alternate map source.
