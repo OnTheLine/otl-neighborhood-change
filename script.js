@@ -18,20 +18,21 @@ var magic1934 = new L.tileLayer.wms("http://geoserver.lib.uconn.edu:8080/geoserv
   attribution: '<a href="http://magic.library.uconn.edu" target="_blank">1934 MAGIC UConn</a> and <a href="http://cslib.org" target="_blank">CSL</a>'
 });
 
-var magic1990 = new L.tileLayer.wms("http://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", {
-  layers: 'MAGIC:1990 Connecticut Aerial Photography',
+// UConn CT ECO WMS: https://cteco.uconn.edu/ctraster/rest/services/images
+// FAQ: http://cteco.uconn.edu/help/faq_map_service.htm#wms
+var layer1990 = new L.tileLayer.wms("https://cteco.uconn.edu/ctraster/services/images/Ortho_1990/ImageServer/WMSServer?", {
+  layers: '0',
   format: 'image/png',
-  version: '1.1.0',
+  version: '1.3.0',
   transparent: true,
-  attribution: '<a href="http://magic.library.uconn.edu" target="_blank">1990 MAGIC UConn</a>'
+  attribution: '<a href="https://cteco.uconn.edu/ctraster/rest/services/images" target="_blank">1990 Ortho, CT ECO UConn</a>'
 });
 
-var magic2004 = new L.tileLayer.wms("http://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", {
-  layers: 'MAGIC:2004 Connecticut Aerial Photography',
+var layer2004 = new L.tileLayer.wms("https://cteco.uconn.edu/ctraster/services/images/Ortho_2004/ImageServer/WMSServer?", {
+  layers: '0',
   format: 'image/png',
-  version: '1.1.0',
-  transparent: true,
-  attribution: '<a href="http://magic.library.uconn.edu" target="_blank">2004 MAGIC UConn</a>'
+  version: '1.3.0',
+  attribution: '<a href="https://cteco.uconn.edu/ctraster/rest/services/images" target="_blank">2004 Ortho, CT ECO UConn</a>'
 });
 
 // https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html
@@ -83,10 +84,10 @@ function pickLayer(s) {
   switch (s) {
     case 'magic1934':
       return magic1934;
-    case 'magic1990':
-      return magic1990;
-    case 'magic2004':
-      return magic2004;
+    case 'layer1990':
+      return layer1990;
+    case 'layer2004':
+      return layer2004;
     case 'esriPresent':
       return esriPresent;
     default:
@@ -177,8 +178,8 @@ function changeBasemap(map, basemap) {
    esriTransportation,
    esriLabels,
    magic1934,
-   magic1990,
-   magic2004
+   layer1990,
+   layer2004
  ].forEach(function(v) {
     map.removeLayer(v);
   });
@@ -193,11 +194,11 @@ function changeBasemap(map, basemap) {
     case 'magic1934':
       map.addLayer(magic1934);
       break;
-    case 'magic1990':
-      map.addLayer(magic1990);
+    case 'layer1990':
+      map.addLayer(layer1990);
       break;
-    case 'magic2004':
-      map.addLayer(magic2004);
+    case 'layer2004':
+      map.addLayer(layer2004);
       break;
     default:
       break;
