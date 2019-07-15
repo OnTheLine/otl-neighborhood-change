@@ -118,7 +118,7 @@ var map2 = L.map('map2', {
 
 // customize link to view source code; add your own GitHub repository
 map1.attributionControl
-.setPrefix('View <a href="http://github.com/jackdougherty/otl-neighborhood-change" target="_blank">code on GitHub</a>');
+.setPrefix('View <a href="http://github.com/ontheline/otl-neighborhood-change" target="_blank">code on GitHub</a>');
 map2.attributionControl
 .setPrefix('');
 
