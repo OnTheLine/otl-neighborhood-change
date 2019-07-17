@@ -30,11 +30,6 @@ section {
   z-index: 1000;
 }
 
-/*L.control.geocoder via Mapzen*/
-.leaflet-pelias-control {
-	left: 80px;
-}
-
 #permalink {
   position: absolute;
   bottom: 0;
