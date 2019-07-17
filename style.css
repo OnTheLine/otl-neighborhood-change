@@ -1,7 +1,18 @@
 html, body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
+  overflow: hidden;
+}
+
+header h3 {
+  padding: 10px 5px;
+  margin: 0;
+}
+
+section {
+  width: 100%;
+  height: calc(100% - 40px);
 }
 
 #map1, #map2 {
@@ -13,14 +24,11 @@ html, body {
 #map2 { float: right; }
 
 .basemaps-wrapper {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
 }
-
-#map1basemaps { left: 10px; }
-#map2basemaps { left: calc(50.5% + 10px); }
 
 /*L.control.geocoder via Mapzen*/
 .leaflet-pelias-control {

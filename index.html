@@ -12,29 +12,39 @@
 </head>
 <body>
 
-  <div id='map1'></div>
+  <header>
+    <h3>Explore the Map: Neighborhood Change in Connecticut, 1934-present</h3>
+  </header>
 
-  <div id="map1basemaps" class="basemaps-wrapper leaflet-bar">
-    <select name="basemaps">
-      <option value="magic1934">1934</option>
-      <option value="layer1990">1990</option>
-      <option value="layer2004">2004</option>
-      <option value="esriPresent" disabled>Present<options>
-      </select>
-  </div>
+  <section>
+    <div id='map1'>
+      <div id="map1basemaps" class="basemaps-wrapper leaflet-bar">
+        <select name="basemaps">
+          <option value="magic1934">1934</option>
+          <option value="layer1990">1990</option>
+          <option value="layer2004">2004</option>
+          <option value="esriPresent" disabled>Present<options>
+        </select>
+      </div>
+      <div id="permalink">Permalink</div>
+    </div>
 
-  <div id='map2'></div>
 
-  <div id="map2basemaps" class="basemaps-wrapper leaflet-bar">
-    <select name="basemaps">
-      <option value="esriPresent">Present<options>
-      <option value="magic1934" disabled>1934</option>
-      <option value="layer1990">1990</option>
-      <option value="layer2004">2004</option>
-    </select>
-  </div>
 
-  <div id="permalink">Permalink</div>
+    <div id='map2'>
+      <div id="map2basemaps" class="basemaps-wrapper leaflet-bar">
+        <select name="basemaps">
+          <option value="esriPresent">Present<options>
+          <option value="magic1934" disabled>1934</option>
+          <option value="layer1990">1990</option>
+          <option value="layer2004">2004</option>
+        </select>
+      </div>
+    </div>
+
+
+
+  </section>
 
   <!-- Load Leaflet from an https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
@@ -49,8 +59,8 @@
      integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
      crossorigin=""></script>
   <!-- Load leaflet-control-geocoder to search locations-->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.8.2/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder@1.8.2/dist/Control.Geocoder.js"></script>
   <!-- load L.Map.Sync from local directory -->
   <script type="text/javascript" src="L.Map.Sync.js"></script>
   <script type="text/javascript" src="script.js"></script>

@@ -128,16 +128,14 @@ L.control.zoom({position: "topright"}).addTo(map2);
 
 L.control.scale().addTo(map2);
 
-var geocoder = L.Control.geocoder({
-  expand: 'click',
-  position: 'topright',
-  geocoder: new L.Control.Geocoder.Nominatim({
+L.Control.geocoder({
+  geocoder: L.Control.Geocoder.nominatim({
     geocodingQueryParams: {
-      viewbox: [],  // by default, viewbox is empty
-      bounded: 0,
+      countrycodes: 'us'
     }
   }),
 }).addTo(map2);
+
 
 function updateGeocoderBounds() {
   var bounds = map2.getBounds();
@@ -145,7 +143,7 @@ function updateGeocoderBounds() {
     bounds._southWest.lat, bounds._northEast.lat,
     bounds._southWest.lng, bounds._northEast.lng,
   ];
-  geocoder.options.geocoder.options.geocodingQueryParams.viewbox = mapBounds;
+  //geocoder.options.geocoder.options.geocodingQueryParams.viewbox = mapBounds;
 }
 
 // Update search viewbox coordinates every time the map moves
