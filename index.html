@@ -4,11 +4,19 @@
   <title>otl-neighborhood-change</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <!-- Load Leaflet from an https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""/>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-4"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-5488840-4');
+  </script>
+
+  <!-- Load Leaflet CSS from CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -29,8 +37,6 @@
       <div id="permalink">Permalink</div>
     </div>
 
-
-
     <div id='map2'>
       <div id="map2basemaps" class="basemaps-wrapper leaflet-bar">
         <select name="basemaps">
@@ -42,36 +48,21 @@
       </div>
     </div>
 
-
-
   </section>
 
-  <!-- Load Leaflet from an https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
-  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-        crossorigin=""></script>
+  <!-- Load Leaflet JS from CDN-->
+    <script src="https://unpkg.com/leaflet/dist/leaflet-src.js"></script>
   <!-- load jQuery  -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   	crossorigin="anonymous"></script>
-  <!-- load Esri Leaflet -->
-  <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
-     integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
-     crossorigin=""></script>
-  <!-- Load leaflet-control-geocoder to search locations-->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.8.2/dist/Control.Geocoder.css" />
-  <script src="https://unpkg.com/leaflet-control-geocoder@1.8.2/dist/Control.Geocoder.js"></script>
+  <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet"></script>
+  <!-- Esri Leaflet Geocoder -->
+    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css">
+    <script src="https://unpkg.com/esri-leaflet-geocoder"></script>
   <!-- load L.Map.Sync from local directory -->
-  <script type="text/javascript" src="L.Map.Sync.js"></script>
-  <script type="text/javascript" src="script.js"></script>
-  <script>
-    // UConn MAGIC Google Analytics tracking code
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-4813179-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+    <script type="text/javascript" src="L.Map.Sync.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
