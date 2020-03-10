@@ -128,14 +128,19 @@ L.control.zoom({position: "topright"}).addTo(map2);
 
 L.control.scale().addTo(map2);
 
-L.Control.geocoder({
-  geocoder: L.Control.Geocoder.nominatim({
-    geocodingQueryParams: {
-      countrycodes: 'us'
-    }
-  }),
-}).addTo(map2);
+// create the geocoding control, add to map 2, display markers
+var searchControl = L.esri.Geocoding.geosearch().addTo(map2);
 
+// create an empty layer group to store the results and add it to the map
+var results = L.layerGroup().addTo(map2);
+
+// listen for the results event and add every result to the map
+  searchControl.on("results", function(data) {
+    results.clearLayers();
+    for (var i = data.results.length - 1; i >= 0; i--) {
+      results.addLayer(L.marker(data.results[i].latlng));
+    }
+  });
 
 function updateGeocoderBounds() {
   var bounds = map2.getBounds();
