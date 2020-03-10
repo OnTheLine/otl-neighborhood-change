@@ -131,8 +131,8 @@ L.control.scale().addTo(map2);
 // create the geocoding control, add to map 2, display markers
 var searchControl = L.esri.Geocoding.geosearch({
   position: 'topright',
-  useMapBounds: true,
-  //searchBounds: bounds,
+  //useMapBounds: true,
+  searchBounds: bounds,
 }).addTo(map2);
 
 // create an empty layer group to store the results and add it to the map
