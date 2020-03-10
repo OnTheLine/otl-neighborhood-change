@@ -129,30 +129,26 @@ L.control.zoom({position: "topright"}).addTo(map2);
 L.control.scale().addTo(map2);
 
 // create the geocoding control, add to map 2, display markers
-var searchControl = L.esri.Geocoding.geosearch({position: "topright"}).addTo(map2);
+var searchControl = L.esri.Geocoding.geosearch({
+  position: 'topright',
+  useMapBounds: true,
+  //searchBounds: bounds,
+}).addTo(map2);
 
 // create an empty layer group to store the results and add it to the map
 var results = L.layerGroup().addTo(map2);
 
 // listen for the results event and add every result to the map
-  searchControl.on("results", function(data) {
-    results.clearLayers();
-    for (var i = data.results.length - 1; i >= 0; i--) {
-      results.addLayer(L.marker(data.results[i].latlng));
-    }
-  });
-
-function updateGeocoderBounds() {
-  var bounds = map2.getBounds();
-  var mapBounds = [
-    bounds._southWest.lat, bounds._northEast.lat,
-    bounds._southWest.lng, bounds._northEast.lng,
-  ];
-  //geocoder.options.geocoder.options.geocodingQueryParams.viewbox = mapBounds;
-}
-
-// Update search viewbox coordinates every time the map moves
-map2.on('moveend', updateGeocoderBounds);
+searchControl.on("results", function(data) {
+  results.clearLayers();
+  for (var i = data.results.length - 1; i >= 0; i--) {
+    results.addLayer(
+      L.marker(data.results[i].latlng).bindPopup( data.results[i].text )
+    );
+  }
+  // Open popups
+  results.eachLayer(function(l) { l.openPopup() })
+});
 
 // sync maps using Leaflet.Sync code
 map1.sync(map2);
