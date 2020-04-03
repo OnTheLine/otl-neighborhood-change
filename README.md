@@ -2,13 +2,10 @@
 Side-by-side aerial views of Connecticut neighborhood change, 1934-present. Leaflet synchronized dual maps to display basemaps of same location over time, with geosearch and permalink features
 
 ## Link
-- https://ontheline.github.io/otl-neighborhood-change/index-caption.html
+https://ontheline.github.io/otl-neighborhood-change/index-caption.html
 
-## Embedded in On The Line book http://OnTheLine.trincoll.edu
-- iframe height 500px
-
-## Based on template
-- https://github.com/jackdougherty/leaflet-map-sync/
+## Embedded in On The Line book
+http://OnTheLine.trincoll.edu
 
 Replaces 2012 UConn MAGIC Google Map http://magic.lib.uconn.edu/otl/dualcontrol_aerialchange.html
 
