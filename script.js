@@ -13,7 +13,7 @@ var layer2 = 'esriPresent';
 var magic1934 = new L.tileLayer.wms("http://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", {
   layers: 'MAGIC:1934 Connecticut Aerial Photography',
   format: 'image/png',
-  version: '1.1.0',
+  version: '1.3.0',
   transparent: true,
   attribution: '<a href="http://magic.library.uconn.edu" target="_blank">1934 MAGIC UConn</a> and <a href="http://cslib.org" target="_blank">CSL</a>'
 });
@@ -103,6 +103,7 @@ var map1 = L.map('map1', {
     zoomControl: false,
     minZoom: minZoom,
     scrollWheelZoom: false,
+    tap: false,
     maxBounds: [minLatLng,maxLatLng]
 });
 
@@ -113,6 +114,7 @@ var map2 = L.map('map2', {
     minZoom: minZoom,
     zoomControl: false,
     scrollWheelZoom: false,
+    tap: false,
     maxBounds: [minLatLng,maxLatLng]
 });
 
