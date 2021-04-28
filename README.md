@@ -1,5 +1,5 @@
 # otl-neighborhood-change
-Side-by-side aerial views of Connecticut neighborhood change, 1934-present. Leaflet synchronized dual maps to display basemaps of same location over time, with geosearch and permalink features
+Side-by-side aerial views of Connecticut neighborhood change, 1934-present. Leaflet synchronized dual maps to display basemaps of same location over time, with geosearch and permalink features.
 
 ## Live map
 https://ontheline.github.io/otl-neighborhood-change/index-caption.html
