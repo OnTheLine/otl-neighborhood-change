@@ -8,15 +8,16 @@ var minZoom = 9;
 var layer1 = 'magic1934';
 var layer2 = 'esriPresent';
 
+
 // define baselayers and insert further below, and also in index.html
-// UConn MAGIC WMS settings - see http://geoserver.lib.uconn.edu:8080/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.MapPreviewPage
-var magic1934 = new L.tileLayer.wms("http://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", {
-  layers: 'MAGIC:1934 Connecticut Aerial Photography',
+
+var magic1934 = new L.tileLayer.wms("https://cteco.uconn.edu/ctraster/services/images/Mosaic_1934_MAGIC/ImageServer/WMSServer?", {  
+  layers: '0',
   format: 'image/png',
-  version: '1.3.0',
   transparent: true,
-  attribution: '<a href="http://magic.library.uconn.edu" target="_blank">1934 MAGIC UConn</a> and <a href="http://cslib.org" target="_blank">CSL</a>'
+  attribution: '<a href="https://maps.cteco.uconn.edu/data/historic1934/" target="_blank">1934 MAGIC UConn</a> and <a href="https://cslib.contentdm.oclc.org/digital/collection/p4005coll10" target="_blank">CT State Library</a>'
 });
+
 
 // UConn CT ECO WMS: https://cteco.uconn.edu/ctraster/rest/services/images
 // FAQ: http://cteco.uconn.edu/help/faq_map_service.htm#wms
