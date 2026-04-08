@@ -11,13 +11,29 @@ var layer2 = 'esriPresent';
 
 // define baselayers and insert further below, and also in index.html
 
+var magic1934 = L.esri.imageMapLayer({
+  url: "https://cteco.uconn.edu/ctraster/rest/services/images/Mosaic_1934_MAGIC/ImageServer",
+  attribution: '<a href="https://maps.cteco.uconn.edu/data/historic1934/" target="_blank">1934 MAGIC UConn</a> and <a href="https://cslib.contentdm.oclc.org/digital/collection/p4005coll10" target="_blank">CT State Library</a>'
+});
+
+var layer1990 = L.esri.imageMapLayer({
+  url: "https://cteco.uconn.edu/ctraster/rest/services/images/Ortho_1990/ImageServer",
+  attribution: '<a href="https://cteco.uconn.edu/ctraster/rest/services/images" target="_blank">1990 Ortho, CT ECO UConn</a>'
+});
+
+var layer2004 = L.esri.imageMapLayer({
+  url: "https://cteco.uconn.edu/ctraster/rest/services/images/Ortho_2004/ImageServer",
+  attribution: '<a href="https://cteco.uconn.edu/ctraster/rest/services/images" target="_blank">2004 Ortho, CT ECO UConn</a>'
+});
+
+/* Deprecated layers below
+
 var magic1934 = new L.tileLayer.wms("https://cteco.uconn.edu/ctraster/services/images/Mosaic_1934_MAGIC/ImageServer/WMSServer?", {  
   layers: '0',
   format: 'image/png',
   transparent: true,
   attribution: '<a href="https://maps.cteco.uconn.edu/data/historic1934/" target="_blank">1934 MAGIC UConn</a> and <a href="https://cslib.contentdm.oclc.org/digital/collection/p4005coll10" target="_blank">CT State Library</a>'
 });
-
 
 // UConn CT ECO WMS: https://cteco.uconn.edu/ctraster/rest/services/images
 // FAQ: http://cteco.uconn.edu/help/faq_map_service.htm#wms
@@ -35,6 +51,7 @@ var layer2004 = new L.tileLayer.wms("https://cteco.uconn.edu/ctraster/services/i
   version: '1.3.0',
   attribution: '<a href="https://cteco.uconn.edu/ctraster/rest/services/images" target="_blank">2004 Ortho, CT ECO UConn</a>'
 });
+*/
 
 // https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html
 var esriImagery = L.esri.basemapLayer('Imagery');
