@@ -11,7 +11,7 @@ Replaces 2012 UConn MAGIC Google Map http://magic.lib.uconn.edu/otl/dualcontrol_
 
 ## Sources
 Connecticut Ecological Conditions Online (CT ECO) Web Map Services https://maps.cteco.uconn.edu/map-services/
-- 1934 historic aerial imagery provided by the Connecticut State Library and UConn MAGIC
+- 1934 historic aerial imagery provided by the Connecticut State Library and UConn MAGIC https://cteco.uconn.edu/ctraster/rest/services/images/Mosaic_1934_MAGIC/ImageServer
 - 1990, 2004 aerial imagery provided by CT ECO
 - present-day imagery provided by Esri
 
