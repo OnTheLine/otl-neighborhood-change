@@ -18,6 +18,7 @@ Connecticut Ecological Conditions Online (CT ECO) Web Map Services https://maps.
 ## About 1934 aerial imagery
 - https://maps.cteco.uconn.edu/data/historic1934/
 - https://cslib.contentdm.oclc.org/digital/collection/p4005coll10/id/11406
+- UConn_MAGIC ArcGIS online account https://www.arcgis.com/home/search.html?restrict=false&sortField=relevance&sortOrder=desc&searchTerm=owner%3A%22UConn_MAGIC%22#content
 
 ## Dependencies
 - Leaflet https://leafletjs.com
